@@ -23,6 +23,7 @@ class MainActivity : AppCompatActivity() {
 
         // Referencia al botón
         val btAdd = findViewById<Button>(R.id.btAdd)
+        val btRes = findViewById<Button>(R.id.btRes)
 
         // Asociaciamos una expresióin lambda como
         // respuesta (callback) al evento Clic sobre
@@ -32,6 +33,13 @@ class MainActivity : AppCompatActivity() {
             textViewContador.setText(contador.toString())
         }
 
+
+        btRes.setOnClickListener {
+
+                contador--
+                textViewContador.setText(contador.toString())
+
+        }
     }
 
     override fun onCreate(savedInstanceState: Bundle?, persistentState: PersistableBundle?) {
